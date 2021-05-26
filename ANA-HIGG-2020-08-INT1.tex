@@ -29,6 +29,7 @@
 
 %-------------------------------------------------------------------------------
 % Extra packages:
+%\usepackage[backend=biber, subfigure, full]{\ATLASLATEXPATH atlaspackage}
 \usepackage{\ATLASLATEXPATH atlaspackage}
 % Commonly used options:
 %  biblatex=true|false   Use biblatex (default) or bibtex for the bibliography.
@@ -40,17 +41,28 @@
 %-------------------------------------------------------------------------------
 % Style file with biblatex options for ATLAS documents.
 \usepackage{\ATLASLATEXPATH atlasbiblatex}
+% Commonly used options:
+%  backref=true|false    Turn on or off back references in the bibliography.
 
 % Package for creating list of authors and contributors to the analysis.
 \usepackage{\ATLASLATEXPATH atlascontribute}
 
 % Useful macros
 \usepackage{\ATLASLATEXPATH atlasphysics}
+\usepackage{amsmath}
+\usepackage{lscape}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{booktabs}
 % See doc/atlas_physics.pdf for a list of the defined symbols.
 % Default options are:
 %   true:  journal, misc, particle, unit, xref
-%   false: BSM, heppparticle, hepprocess, hion, jetetmiss, math, process, other, texmf
+%   false: BSM, heppparticle, hepprocess, hion, jetetmiss, math, process,
+%          other, snippets, texmf
 % See the package for details on the options.
+%\usepackage[output=true]{\ATLASLATEXPATH atlastodo}
 
 % Files with references for use with biblatex.
 % Note that biber gives an error if it finds empty bib files.
@@ -65,12 +77,11 @@
 
 % Add you own definitions here (file ANA-HIGG-2020-08-INT1-defs.sty).
 \usepackage{ANA-HIGG-2020-08-INT1-defs}
-
 %-------------------------------------------------------------------------------
 % Generic document information
 %-------------------------------------------------------------------------------
 
-% Title, abstract and document
+% Title, abstract and document 
 \input{ANA-HIGG-2020-08-INT1-metadata}
 % Author and title for the PDF file
 \hypersetup{pdftitle={ATLAS document},pdfauthor={The ATLAS Collaboration}}
@@ -86,53 +97,42 @@
 
 % List of contributors - print here or after the Bibliography.
 %\PrintAtlasContribute{0.30}
+\clearpage
+
+\input{tex/Introduction.tex}
+\clearpage
+\input{tex/Theory.tex}
 %\clearpage
+\input{tex/Detector.tex}
+\clearpage
+\input{tex/MonteCarlo.tex}
+\clearpage
+%%\input{tex/Selection.tex}
+\input{tex/selection_new.tex}
+\clearpage
+\input{tex/categorization_new.tex}
+\clearpage
+%%\input{tex/Modelling.tex}
+\input{tex/signal_model.tex}
+\clearpage
+\input{tex/background.tex}
+\clearpage
+\input{tex/Systematic.tex}
+\clearpage
+\input{tex/Fitting.tex}
+\clearpage
+\input{tex/Results.tex}
+\clearpage
+\input{tex/Conclusion.tex}
+\clearpage
 
 %-------------------------------------------------------------------------------
-\section{Introduction}
-\label{sec:intro}
-%-------------------------------------------------------------------------------
-
-Place your introduction here.
-
-
-%-------------------------------------------------------------------------------
-\section{Analysis}
-\label{sec:analysis}
-%-------------------------------------------------------------------------------
-
-You can find some text snippets that can be used in papers in \texttt{template/atlas-snippets.tex}.
-Some of the snippets need the \texttt{jetetmiss} option passed to \texttt{atlasphysics}.
-%\input{atlas-snippets}
-
-
-%-------------------------------------------------------------------------------
-\section{Results}
-\label{sec:result}
-%-------------------------------------------------------------------------------
-
-Place your results here.
-
-% All figures and tables should appear before the summary and conclusion.
-% The package placeins provides the macro \FloatBarrier to achieve this.
-% \FloatBarrier
-
-
-%-------------------------------------------------------------------------------
-\section{Conclusion}
-\label{sec:conclusion}
-%-------------------------------------------------------------------------------
-
-Place your conclusion here.
-
-
-%-------------------------------------------------------------------------------
-% If you use biblatex and either biber or bibtex to process the bibliography
+%% If you use biblatex and either biber or bibtex to process the bibliography
 % just say \printbibliography here
 \printbibliography
 % If you want to use the traditional BibTeX you need to use the syntax below.
-%\bibliographystyle{bib/bst/atlasBibStyleWithTitle}
-%\bibliography{ANA-HIGG-2020-08-INT1,bib/ATLAS,bib/CMS,bib/ConfNotes,bib/PubNotes}
+% \bibliographystyle{obsolete/bst/atlasBibStyleWithTitle}
+% \bibliography{ANA-HIGG-2020-08-INT1,bib/ATLAS,bib/CMS,bib/ConfNotes,bib/PubNotes}
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
@@ -151,6 +151,17 @@ The list should be printed either here or before the Table of Contents.
 \appendix
 \part*{Appendices}
 \addcontentsline{toc}{part}{Appendices}
+\input{tex/appendices/App_BrResult.tex}
+%\clearpage
+\input{tex/appendices/App_NewCate.tex}
+%\clearpage
+\input{tex/appendices/App_BinningOpt.tex}
+%\clearpage
+\input{tex/appendices/App_2x2DSB.tex}
+%\clearpage
+\input{tex/appendices/App_SStest.tex}
+%\clearpage
+\input{tex/appendices/App_2Dfit.tex}
 %-------------------------------------------------------------------------------
 
 In an ATLAS note, use the appendices to include all the technical details of your work

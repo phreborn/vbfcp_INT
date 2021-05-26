@@ -1,0 +1,20 @@
+\section{Fitting strategy}
+\label{sec:fit}
+
+\paragraph{} The estimation of CP-mixing parameter $\tilde{d}$ uses a maximum-likelihood fit performed on $m_{\gamma\gamma}$ distribution simultaneously in all 6 OO bins. The likelihood function could be constructed as:
+
+\begin{center}
+\begin{math}
+\mathcal{L} = \mathcal{L}(\boldsymbol{x} |\boldsymbol{\theta}) = \prod_{bin}\prod_{j=1}^{N}f_{bin}(m_{\gamma\gamma})G(\theta)
+\end{math}
+\end{center}
+
+
+Where $\boldsymbol x$ represents dataset, $\boldsymbol \theta$ is nuisance parameter, $f_{bin}(m_{\gamma\gamma})$ is the diphoton invariant mass distribution model for each bins, $G(\boldsymbol \theta)$ is constrain function for systematic uncertainties. The parameter of interest(POI), $\tilde{d}$, is embedded in $m_{\gamma\gamma}$ model, so there is no analytic relation between likelihood value and POI. A set of signal templates corresponding to different value of CP-mixing parameter $\tilde{d}$ is created by reweighting the SM VBF $H\to\gamma\gamma$ to build the CP-mixing models, and then a template fit could be performed with data and model with different $\tilde{d}$ value (background model keeps consistent) to evaluate the likelihood function. For the fit in each $\tilde{d}$ model, VBF signal strength, continuum background yield and parameters describing the background model are float, which means the effect of background mis-modelling is considered and any constrain from possible model-dependent cross section information is not exploited. Other nuisance parameters are fixed to their best-fit values $\hat{\boldsymbol \theta}$. 
+
+
+\paragraph{} A negative log-likelihood (NLL) curve can be constructed by calculating the NLL value for each $\tilde{d}$ hypothesis. Best-estimated $\tilde{d}$ as well as its central confidence interval at 68\% (95\%) confidence level (CL) can be determined with the minimum value of NLL, $NLL_{min}$ and the points at which $\Delta NLL = NLL-NLL_{min} = 0.5(1.96)$. An Asimov dataset is used to get expected sensitivity from this method and is shown in Figure ~\ref{fig:NLLcurve}. 
+
+
+\paragraph{} Since the Optimal Observable is the main sensitive variable for CP test in this analysis, another 2D model for OO and $m_\gamma\gamma$ was considered to construct the likelihood function. In some preliminary study this 2D model did not show significant improvement with baseline method, and had some difficulty in modelling, it was obsoleted in this analysis. Appendix ~\ref{appendix:2Dmodel} includes some results based on this. 
+
