@@ -2,9 +2,9 @@
 \label{sec:Category}
 
 \subsection{New MVA based categorization}
-
-The VBF-enriched categories in Higgs coupling analysis focus more on VBF significance and the topology of final state to match the calculation in STXS framework, they are not suitable for this precise measurement of Higgs CP. For this reason a new 2 dimension boosted decision tree(BDT) is trained to have a high VBF purity signal region and reject both gluon-fusion and continuum background events. Both of these two BDTs use 7 variables as input: $pT_{Hjj}$, $p_{Tt}$, $m_{jj}$, $\Delta\eta_{jj}$, $\delta\Phi_{\gamma\gamma, jj}$, $\eta^{Zepp}$, $\Delta R^{min}_{\gamma, j}$. They are trained independently with total templates. Figure ~\ref{fig:ROC_ggh} ~\ref{fig:ROC_yy} show the trained BDT distribution and ROC curve, more details can be found in Appendix ~\ref{appendix:NewCate}
-
+\todo{remove new, cite TMVA and BDT papers}
+The VBF-enriched categories in Higgs coupling analysis focus more on VBF significance and the topology of final state to match the calculation in STXS framework, they are not suitable \todo{they're suitable but they're not optimal, rephrase} for this precise measurement of Higgs CP. For this reason a new 2 dimension boosted decision tree(BDT) is trained to have a high VBF purity signal region and reject both gluon-fusion and continuum \todo{$\gamma\gamma$} background events. Both of these two BDTs use 7 variables as input: $pT_{Hjj}$, $p_{Tt}$, $m_{jj}$, $\Delta\eta_{jj}$, $\delta\Phi_{\gamma\gamma, jj}$, $\eta^{Zepp}$, $\Delta R^{min}_{\gamma, j}$. They are trained independently with total\todo{what does total mean?}templates. Figure ~\ref{fig:ROC_ggh} ~\ref{fig:ROC_yy} show the trained BDT distribution and ROC curve, more details can be found in Appendix ~\ref{appendix:NewCate}
+\todo{All details should be here, add plots of all the input variables between signal and background, add signal and background plots in all categories and OO bins after selection including dataside bands (take inspiration from ATL-COM-PHYS-2016-1784 plot 34 and 38, add a table with separation power of all variables used, add correlation matrices for the variables, all the parameters for the BDT (number of trees, depth ..etc)}
 \begin{figure}[bp]
   \centering
   \includegraphics[width=0.45\linewidth]{figure/BDT/Perf_ggh/overtrain_BDT.eps}
@@ -21,7 +21,7 @@ The VBF-enriched categories in Higgs coupling analysis focus more on VBF signifi
   \label{fig:ROC_yy}
 \end{figure}
 
-The $BDT_{VBF/ggF}$ uses VBF purity $p= \frac{N_{VBF}}{N_{VBF}+N_{ggF}}$ as criterion. Since the maximum value of VBF purity appears at the edge of BDT range $BDT_{VBF/ggF}=1$, the working point is manually chosen to have the same VBF efficiency 34\% as in Higgs coupling categorization. The VBF purity is increased from 87.7\% to 91.3\%, and gluon-fusion efficiency is decreased from 6.5\% to 4.5\%. \\
+The $BDT_{VBF/ggF}$ uses VBF purity $p= \frac{N_{VBF}}{N_{VBF}+N_{ggF}}$ as criterion. Since the maximum value of VBF purity appears at the edge of BDT range $BDT_{VBF/ggF}=1$, the working point is manually chosen to have the same VBF efficiency 34\% as in Higgs coupling categorizatio \todo{why is that?}. The VBF purity is increased from 87.7\% to 91.3\%, and gluon-fusion efficiency is decreased from 6.5\% to 4.5\%. \\
 
 \begin{figure}[tbp]
   \centering
@@ -30,7 +30,7 @@ The $BDT_{VBF/ggF}$ uses VBF purity $p= \frac{N_{VBF}}{N_{VBF}+N_{ggF}}$ as crit
   \caption{VBF purity with relationship of VBF efficiency(left) and ggF rejection(right). The working point is manually chosen with $\epsilon_{VBF}=34\%$, corresponding VBF purity and ggF rejection could be gotten.}
   \label{fig:vbfwp}
 \end{figure}
-
+\todo{explain the sudden dips/jumps in the plot}
 Two regions are defined by the former criterion, naming \texttt{ggH\_tight} and \texttt{ggH\_loose} temporarily. Scanning $BDT_{VBF/\gamma\gamma}$ value in these two regions individually can provide a cut value at the global maximum VBF significance point. Figure ~\ref{fig:catedef} summary the definition of totally 4 categories, naming TT, TL, LT and LL. \\
 
 \begin{figure}[tbp]
@@ -84,8 +84,8 @@ combined          & \multicolumn{4}{c|}{6.92}           &   \\ \hline
 
 
 \subsection{Optimal observable binning}
-
-The choice of optimal observable binning method can influence the sensitive of CP measurement. All events are divided into 6 positive-negative symmetry bins to ensure enough statistics and match the symmetry distribution of optimal observable. With this restriction the binning can be decided by scanning only 2 parameter $p_1$ and $p_2$ with step 0.5 to have maximum global VBF significance:
+\todo{add label for the section, use math style consistently everywhere}
+The choice of optimal observable binning method can influence the sensitive of CP measurement. All events are divided into 6 positive-negative symmetry bins to ensure enough statistics and match the symmetry distribution of optimal observable \todo{use "trade-off" between purity and stats.}. With this restriction the binning can be decided by scanning only 2 parameter $p_1$ and $p_2$ with step 0.5 to have maximum global VBF significance:
 
 %\begin{center}
 %\begin{math}
@@ -97,7 +97,7 @@ $$
 %\end{center}
 
 With Nsr is the extrapolated background event number from sideband data. For different CP-mixing model the Z would be different, so in order to be model independent, an average Z value from d=-0.1 to 0.1 is chosen as the final criteria. Figure ~\ref{fig:Zvsp} shows the Z value for p1 and p2 scanning. The event number in every BDT categories and bins are shown in Table ~\ref{tab:Nevtinbins}
-
+\todo{too short! what are the conclusions? haven't detailed how the edges where chosen}
 \begin{figure}[tbp]
   \centering
   \includegraphics[width=0.45\linewidth]{figure/OObinning/binning.png}

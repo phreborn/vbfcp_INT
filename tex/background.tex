@@ -5,20 +5,19 @@
 
 \subsection{Background modeling strategy}
 \label{ssec:bkg_strategy}
-
-The strategy for the continuous background modelling follows what traditionally done in $H\to\gamma\gamma$ measurements, with the addition of some dedicated procedures to cope with specific issues related to insufficient MC statistics or very low-statistics categories. This section only contains a simplified description, more details could be found in HGam coupling analysis ~\ref{ANA-HIGG-2020-16-INT1}. 
+The strategy for the continuous background modelling follows what traditionally done in $H\to\gamma\gamma$ measurements, with the addition of some dedicated procedures to cope with specific issues related to insufficient MC statistics or very low-statistics categories. This section only contains a simplified description, more details could be found in HGam coupling analysis ~\ref{ANA-HIGG-2020-16-INT1} \todo{fix citation}. 
 
 The steps comprising the background modelling strategy can be summarised as follows:
 \begin{itemize}
 
-  \item The composition of the continuous background in term of \yy, \yjet and \jetjet components is estimated with data driven technique for each category entering the measurement, as detailed in \Sect{\ref{ssec:bkg_composition}}.
-  \item The background fractions are used to build \myy background templates for each category entering the measurement, where the \yy component is obtained from MC, while the \yjet and \jetjet components are measured from data driven control regions and used to reweight the \yy MC, as detailed in \Sect{\ref{ssec:bkg_templates}}.
+  \item The composition of the continuous background in term of \yy, \yjet and \jetjet components is estimated with data driven technique for each category entering the measurement, as\todo{remove as since it's not mentioned yet (in all points as well)} detailed in \Sect{\ref{ssec:bkg_composition}}.
+  \item The background fractions are used to build \myy background templates for each category entering the measurement, where the \todo{the shape of} \yy component is obtained from MC, while the \todo{shapes of} \yjet and \jetjet components are measured from data driven control regions and used to reweight the \yy MC, as detailed in \Sect{\ref{ssec:bkg_templates}}.
 
-  \item In order to improve the background modeling and reduce the impact of limited MC statistics, a smoothing procedure is being developed to be eventually applied to the background template, provided that the improvements on the results outweight the possible associated systematic uncertainties. 
+  \item In order to improve the background modeling and reduce the impact of limited MC statistics, a smoothing procedure is being developed to be eventually applied to the background template, provided that the improvements on the results outweight the possible associated systematic uncertainties. \todo{you mean GPR? if so clarify and add necessary details and citation, this point is very vague}
 
-  \item The Spurious Signal approach is used in the smoothed \yy templates to select a functional form to describe each template, as well as the associated bias that will enter the measurement as a systematic uncertainties, as detailed in \Sect{\ref{ssec:spurious_signal}}. The Spurious Signal criteria are defined in order to cope with the limited MC statistics that in some case leads to non-physical large bias measurements.
+  \item The Spurious Signal\todo{no need for capital S} approach is used in the smoothed \yy templates to select a functional form to describe each template, as well as the associated bias that will enter the measurement as a systematic uncertainties, as detailed in \Sect{\ref{ssec:spurious_signal}}. The Spurious Signal criteria are defined in order to cope with the limited MC statistics that in some case leads to non-physical large bias measurements.
 
-  \item In very low-statistic categories, defined as those categories with \textcolor{red}{less than 10 events per bin in the \myy sidebands}, the smoothing procedure tends to introduce large non-physical structures in the templates, and it is therefore not suited to be used for them. For this reason, for this categories we initially select the statistically-justified function performing a Wald-test on the data sidebands using a family of function based on a exponential of increasing complexity. We accept the simplest function justifies by the Wald-test, and perform the Spurious Signal measurement with this function tolerating a bias that could be larger than the criteria used for the high-statistic categories, but would have a small impact on the overall sensitivity. This procedure is described in \Sect{\ref{sssec:bkg_functions}}. 
+  \item In very low-statistic categories, defined as those categories with \textcolor{red}{less than 10 events per bin in the \myy sidebands} \todo{why in red, also specify the bin width and whether this criteria is for data or MC stats}, the smoothing procedure tends to introduce large non-physical structures in the templates, and it is therefore not suited to be used for them. For this reason, for this categories we initially select the statistically-justified function performing a Wald-test on the data sidebands using a family of function based on a exponential of increasing complexity. We accept the simplest function justifies by the Wald-test, and perform the Spurious Signal measurement with this function tolerating a bias that could be larger than the criteria used for the high-statistic categories, but would have a small impact on the overall sensitivity. This procedure is described in \Sect{\ref{sssec:bkg_functions}}. 
 
 \end{itemize}
 
@@ -26,9 +25,9 @@ The steps comprising the background modelling strategy can be summarised as foll
 \subsection{Background compositions}
 \label{ssec:bkg_composition}
 
-The dominant background entering the invariant mass spectrum comes from SM continuum diphoton production. A large number of photons are produced inside jets due to de decays of neutral mesons to photon pairs. Thus, photon-jet and di-jet events in which the jets are mis-identified as photons represent a non-negligible source of background. Photon-pairs can be also faked from Drell-Yan events in which both electrons are misidentified as photons. However, this background only contributes with a small fraction ($<1\%$).
+The dominant background entering the invariant mass spectrum comes from SM continuum diphoton production. A large number of photons are produced inside jets due to de decays of neutral mesons to photon pairs. Thus, photon-jet and di-jet events in which the jets are mis-identified as photons represent a non-negligible source of background. Photon-pairs can be also faked from Drell-Yan events in which both electrons are misidentified as photons. However, this background only contributes with a small fraction ($<1\%$). \todo{cite this number}
 
-The number of \yy, \yjet and \jetjet events entering each category after the final selection is estimated by means of a double two-dimensional sideband ABCD method~\cite{ATL-COM-PHYS-2012-592}. This data-driven method extrapolates the fraction of fake photons within the signal region from the composition of the side-band control regions, built by inverting photon identification and isolation requirements. The fractions are calculated individually in each categories and OO bins for the background template building. Table ~\ref{tab:yyfraction} lists the \yy fraction in all categories. More details are shown in Appendix ~\ref{appendix:2x2DSB}. 
+The number of \yy, \yjet and \jetjet events entering each category after the final selection is estimated by means of a double two-dimensional sideband ABCD method~\cite{ATL-COM-PHYS-2012-592}\todo{fix citation}. This data-driven method extrapolates the fraction of fake photons within the signal region from the composition of the side-band control regions, built by inverting photon identification and isolation requirements. The fractions are calculated individually in each categories and OO bins for the background template building. Table ~\ref{tab:yyfraction} lists the \yy fraction in all categories. More details are shown in Appendix ~\ref{appendix:2x2DSB}. 
 
 \begin{table}[htbp]
   \centering
@@ -65,7 +64,7 @@ The number of \yy, \yjet and \jetjet events entering each category after the fin
 \label{ssec:bkg_templates}
 
 Considering the low \jetjet fraction and similar performance of \yjet and \jetjet, those two components are merged together as \yjet+\jetjet for the background estimation. The shape is determined with a data control region, in TT, TL and LT categories it is defined as at least one of the two selected photons fail the tight identification and loose isolation requirement due to insufficient MC statistics, and in LL category it is defined as inverting the identification and isolation of exactly one of two photon candidates.
-Contamination from \yy has been tested to be ignorable as shown in Figure ~\ref{fig:yjCR}, and a \textcolor{red}{linear} reweighting is derived to match the \yy and control region shapes. The bin width for ratio function smoothing varies from 5GeV, 2GeV, 1GeV and 0.5GeV respectively in TT, TL, LT, LL categories to match the MC statistics for an un-biased result. Uncertainty of this reweighted template contains two part: from the choice of smoothing function and from \yy fraction, while the latter is dominant. 
+Contamination from \yy has been tested to be ignorable as shown in Figure ~\ref{fig:yjCR}, and a \textcolor{red}{linear}\todo{why in red} reweighting is derived to match the \yy and control region shapes. The bin width for ratio function smoothing varies from 5GeV, 2GeV, 1GeV and 0.5GeV respectively in TT, TL, LT, LL categories to match the MC statistics for an un-biased result. Uncertainty of this reweighted template contains two part: from the choice of smoothing function and from \yy fraction, while the latter is dominant. 
 These derived shapes are combined with the measured relative event fractions to obtain the total background shape. The \yy fraction is measured as mentioned in ~\ref{ssec:bkg_composition} \\
 
 The obtained templates show a good agreement when comparing them with events in data passing the nominal selection (with tight photon identification and isolation cuts, TI) in the sidebands, as shown in \Fig{\ref{fig:BkgData-MC}}.\\
@@ -180,7 +179,7 @@ The obtained templates show a good agreement when comparing them with events in 
 \subsubsection{Background smoothing}
 \label{ssec:bkg_smoothing}
 \textcolor{red}{Need Simplification} \\
-
+\todo{summarize and fix citation cite HGam notes, too detailed}
 Because of the limited statistics of the simulation samples used in the calculation, the value
 of the spurious signal systematic uncertainty is subject to significant statistical fluctuations within
 many of the analysis categories~\cite{Hyneman:2712576}. Statistical fluctuations in the background-only sample may cause
@@ -332,7 +331,7 @@ It's to be emphasized that even the relaxed condition is used, the background un
 
 \subsubsection{Treatment of low-statistic cetegories}
 \label{sssec:bkg_functions}
-
+\todo{add f-test to main of body of the paper and detailed f-test results (chi2 table in each bin each category). Check plots and fits in Figure 15 some fits look wrong!!}
 The determination of analytical functions is part of the result of spurious signal study, however, for low stastics categories with a background template suffering of very large statistical flucttuation we introduce a preliminary step. The straight use of the spurious signal procedure on these templates, in fact, would potentially lead to select a function with large number of degrees of freedom to accomodate these statistical fluctuation, and these function can prove to be dangerous when used on data. For this reason, for categories with less then 100 events in the \myy\ sidebads, we restrict the selection of the modeling function to exponential of first, second and third order, collectively described by:
 \begin{equation}
   f_i{x} = e^{\sum_{i=0}^2 a_i x^i}

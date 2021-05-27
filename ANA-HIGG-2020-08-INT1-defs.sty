@@ -1,3 +1,16 @@
+% Red filled boxes for missing refs
+\makeatletter
+\def\@setref#1#2#3{%
+  \ifx#1\relax
+   \protect\G@refundefinedtrue
+   \nfss@text{\reset@font\colorbox{red}{\texttt{\scriptsize\textbf{\detokenize{#3}}}}}%
+   \@latex@warning{Reference `#3' on page \thepage \space is undefined}%
+  \else
+   \hyperref[#3]{\expandafter#2#1}\null
+  \fi}
+\makeatother
+
+
 % production modesA
 \newcommand*{\ggH}{\ensuremath{\mathrm{ggF}}\xspace}
 \newcommand*{\ggF}{\ensuremath{\mathrm{ggF}}\xspace}

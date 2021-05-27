@@ -18,13 +18,15 @@ where $N$ is a normalization factor and the six parameters are
 	\item $n_{low}$ and $n_{high}$ are the exponents of the low and high mass tails. With the $\alpha$'s, they define $R_{low} = \frac{n_{low}}{\alpha_{low}}$ and $R_{high}$ similarly.
 \end{itemize}
 
-In the previous analysis \cite{Hasib:2238687}, the DSCB has showed a good $\chi^2$ in the signal only fit and gives a slightly smaller bias on the fitted signal yield using injection tests on Asimov background and signal MC. \\ The advantage of the DSCB is to well separate the contribution coming from the core and from the tails, making easier to apply systematic variations on the scale (on $\mu_\text{CB}$) and on the resolution (to $\sigma_\text{CB}$). \\
+In the previous analysis \cite{Hasib:2238687} \todo{which previous analysis, you meant in all HGam analysis, this is the first VBF CP analysis in HGam}, the DSCB has showed a good $\chi^2$ in the signal only fit and gives a slightly smaller\todo{smaller than what! very vague, make sure this is correct} bias on the fitted signal yield using injection tests on Asimov background and signal MC. \\ The advantage of the DSCB is to well separate the contribution coming from the core and from the tails, making easier to apply systematic variations on the scale (on $\mu_\text{CB}$) and on the resolution (to $\sigma_\text{CB}$). \\
 
 Thanks to the very precise knowledge of the Higgs mass from Run1 from the combination of ATLAS and CMS measurements ($\mH=125.09\err{0.21}\stat\err{0.11}\syst \, \si{\GeV}$)~\cite{HIGG-2014-14} and to the relatively small error of the mass scale systematics ($<1\%$), it is possible to parametrize the shape using just one set of MC samples simulated with the Higgs mass \mH fixed at \SI{125}{\GeV}. The MC sample combines all the production modes assuming Standard Model cross sections and the three MC types (mc16a+d+e) are weighted taking into account the relative luminosity of 2015/2016, 2017 and 2018 datasets, respectively. The generalization of the fitted model to any value of \mH (in a small interval close \SI{125}{\GeV}) is done with a simple shift of the $\mu_{CB}$ parameter ($\mu_\text{CB}= m_H + \mu_\text{CB}^{\SI{125}{\GeV}} - \SI{125}{\GeV}$).\\
 
 \textcolor{red}{Systematic from mH:  Higgs mass: 125.09 +/- 0.24 GeV as photon energy scale (PES).}
+\todo{add a table with FULL variations of all PES/PER for all bins, all categories at d=0!}
+The signal shapes are fitted in the fixed mass range \SIrange{105}{160}{\GeV} while leaving floating all the six parameters of the DSCB function. The signal models for each category are shown in \Fig{\ref{fig:signal_shapes}}. The same procedure is performed both for SM and BSM Monte Carlo samples, in every VBF categories, Optimal Observable bins \todo{what does that means, OO bins are determined by their best fit?!} and CP-mixing hypothesis the \myy models are determined by their best fit results from MC.
 
-The signal shapes are fitted in the fixed mass range \SIrange{105}{160}{\GeV} while leaving floating all the six parameters of the DSCB function. The signal models for each category are shown in \Fig{\ref{fig:signal_shapes}}. The same procedure is performed both for SM and BSM Monte Carlo samples, in every VBF categories, Optimal Observable bins and CP-mixing hypothesis the \myy models are determined by their best fit results from MC.
+\todo{add some plots showing the up and down variations for some PES, some PER variations}
 
 \begin{figure}[htbp]
   \includegraphics[width=.24\textwidth]{figure/sigmodel/SigFit_TTbin0.png}
@@ -59,6 +61,6 @@ In the final statistical workspace:
 \begin{itemize}
 	\item the value of \mH is constrained to the one of \RunOne measurement, taking into account its error;
 	\item all the six parameters of the DSCB are kept fix during the fit
-	\item $\mu_\text{CB}$ and $\sigma_\text{CB}$ are each multiplied by a response function to take into account photon energy scale and photon energy resolution systematics, respectively (see \Sect{\ref{sssec:signal_shape_syst}})
+	\item $\mu_\text{CB}$ and $\sigma_\text{CB}$ are each multiplied by a response function to take into account photon energy scale and photon energy resolution systematics, respectively (see \Sect{\ref{sssec:signal_shape_syst}} \todo{fix reference!})
 \end{itemize}
 

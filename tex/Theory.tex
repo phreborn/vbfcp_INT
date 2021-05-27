@@ -1,14 +1,14 @@
 \section{Theoretical framework}
 \label{sec:theory}
-\paragraph{}In order to be convenient for the future combination in different Higgs decay channel, the basic theory considered in this analysis keeps consistency with previous Higgs CP test in di-tau channel. The effective Lagrangian is the SM Lagrangian augmented with CP-odd operator of mass dimension 6, involving the Higgs field and electroweak gauge field. The other interaction between Higgs/vector boson and fermions/gluons is assumed to be the same with SM prediction. The Lagrangian could be written as: 
+\paragraph{}\todo{introduce what the the EFT Lagrangian is, before speaking of Htau combination} The effective Lagrangian is the SM Lagrangian augmented with CP-odd operator of mass dimension 6, involving the Higgs field and electroweak gauge fields. The other interactions between Higgs/vector boson and fermions/gluons are assumed to be the same with SM prediction. The Lagrangian is be written as: 
 
 \begin{center}
 \begin{math}
 \mathcal{L}_{eff} = \mathcal{L}_{SM}+ \tilde{g}_{HAA}H\tilde{A}_{\mu\nu}A^{\mu\nu} + \tilde{g}_{HAZ}H\tilde{A}_{\mu\nu}Z^{\mu\nu} + \tilde{g}_{HZZ}H\tilde{Z}_{\mu\nu}Z^{\mu\nu} + \tilde{g}_{HWW}H\tilde{W}_{\mu\nu}^{+}W^{-\mu\nu}
 \end{math}
 \end{center}
-
-Where $V^{\mu\nu}$ and $\tilde{V}^{\mu\nu}=\epsilon^{\mu\nu\rho\sigma}V_{\rho\sigma} $ (with $V=W^{\pm},Z,A$) denotes the vector field strength. Among the 4 coupling constants $g_{HVV}$ only 2 of them are independent due to the U(1)*SU(2) constrain, they can be written into 2 dimensionless coupling $\tilde{d}$ and $\tilde{d}_B$. As the different contribution from various vector electroweak gauge boson fusion process could not be distinguished experimentally, an arbitrary choice $\tilde{d}$ = $\tilde{d}_B$ is adopt. So the following relation could be derived: 
+\todo{Please add citation to the original EFT papers where this Lagrangian is from, say that this is *after* symmetry breaking! and cite }
+Where $V^{\mu\nu}$ and $\tilde{V}^{\mu\nu}=\epsilon^{\mu\nu\rho\sigma}V_{\rho\sigma} $ (with $V=W^{\pm},Z,A$) denotes the vector field strength. Among the 4 coupling constants $g_{HVV}$ only 2 of them are independent due to the U(1)*SU(2) \todo{use latex math!} constrains, they can be written into two dimensionless coupling $\tilde{d}$ and $\tilde{d}_B$ \todo{use latex equation to cite them, also detail who theses couplings relate to tilde-d before}. As the different contribution from various vector electroweak gauge boson fusion process could not be distinguished experimentally, an arbitrary choice $\tilde{d}$ = $\tilde{d}_B$ is adopted. So the following relation could be derived: 
 
 \begin{center}
 \begin{math}
@@ -16,7 +16,7 @@ Where $V^{\mu\nu}$ and $\tilde{V}^{\mu\nu}=\epsilon^{\mu\nu\rho\sigma}V_{\rho\si
 \end{math}
 \end{center}
 
-The parameter $\tilde{d}$ becomes the only one describing the CP violation in VBF Higgs production. The corresponding matrix element could be written as the sum of a CP-even SM contribution $\mathcal{M}_{SM}$ and a CP-odd contribution $\mathcal{M}_{CP-odd}$ from EFT, and $\tilde{d}$ could be factorized out:
+The parameter $\tilde{d}$ becomes the only one describing the CP violation in VBF Higgs production. \todo{add Lorentz sturcture of the vertices and explain the different term}.The corresponding matrix element could be written as the sum of a CP-even SM contribution $\mathcal{M}_{SM}$ and a CP-odd contribution $\mathcal{M}_{CP-odd}$ from EFT, and $\tilde{d}$ could be factorized out\todo{refer back to the equation mentioning the Lorentz structure of the vertices to justify this statement}:
 
 \begin{center}
 \begin{math}
@@ -32,12 +32,15 @@ The VBF cross section is proportional to the squared matrix element:
 \end{math}
 \end{center}
 
-The first term and last term are both CP-even, only the second term from the interference of 2 matrix element is CP-odd, representing a new source of CPV in Higgs field. This CP-odd term would vanish after integrated after a CP-symmetric phase space, so it does not contribute to the total cross section and observed event yields after applying CP-symmetric selection criteria. The third term could increase the total cross section by an amount of $\tilde{d}^2$. 
+The first term and last term are both CP-even, only the second term from the interference of 2\todo{two not 2, every where in the text, numbers should be written as words} matrix element is CP-odd, representing a new source of CPV in Higgs field. This CP-odd term would vanish after integrated after a CP-symmetric phase space, so it does not contribute to the total cross section and observed event yields after applying CP-symmetric selection criteria. The third term could increase the total cross section by an amount of $\tilde{d}^2$. 
 
+%why comment?
+\todo{add all the removed details!}
 \begin{comment}
 \paragraph{}In the decay mode the EFT operator brings new source for Higgs decay to di-photon final state. At tree level these effective operators will contribute to the partial decay width of Higgs boson in $H\to\gam\gam$, $H\to\gam Z$, $H\to ZZ$ and $H\to WW$ channels. The helicity configuration of the particles in the final state is orthogonal to the SM case, so the interference term is zero. The angular distribution for the final state photon would not be influenced so only the change in number of branching ratio is considered: 
 
-\begin{equation}
+\begin{equation} why ?
+
 \label{eq:Bryy}
 \small
 \begin{aligned}
@@ -56,6 +59,7 @@ The numerical contribution from the branching ratio is significant compared with
 \end{figure}
 \end{comment}
 
+\todo{describe first that typically people used signed dphijj and cite the Zeppenfeld CP paper similar to Htau INT, then introduce that the OO is more optimal}
 \paragraph{}The VBF Higgs decay final state contains the reconstructed Higgs boson and two tagging jets from VBF topology. This can be characterized in a seven-dimension phase space, when fixing the Higgs mass, neglecting jet masses and exploiting the transverse momentum conservation. The Optimal Observable combines the information from total phase space into one single variable, so it shows much better performance than traditional operators. It is defined as the ratio of the interface term in the matrix element to the SM contribution: 
 
 \begin{center}
@@ -65,8 +69,9 @@ The numerical contribution from the branching ratio is significant compared with
 \end{center}
 
 
-\paragraph{}The Optimal Observable is a CP-odd variable, so it can be a probe of CPV in the HVV vertex. In the SM the expectation value would vanish(<OO>=0), so any non-zero mean value or asymmetry in distribution of Optimal Observable indicates the physics beyond SM, either stemming from CPV, or originating from rescattering effects ~\cite{Brehmer_2018}. Plot ~\ref{fig:OOwithd} shows the distribution of Optimal Observable for several $\tilde{d}$ VBF signal model, with obvious non-zero mean value and asymmetry shape. 
+\paragraph{}The Optimal Observable is a CP-odd variable, so it can be a probe of CPV in the HVV vertex. In the SM the expectation\todo{mean value} value would vanish(<OO>=0), so any non-zero mean value or asymmetry in distribution of Optimal Observable indicates the physics beyond SM, either stemming from CPV, or originating from rescattering effects ~\cite{Brehmer_2018} \todo{detail this }. Plot ~\ref{fig:OOwithd} shows the distribution of Optimal Observable for several $\tilde{d}$ VBF signal model, with obvious non-zero mean value and asymmetry shape. 
 
+\todo{plot is very low resolution, use the original pdf or ebs file and not png}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.7\textwidth]{figure/OOind.png}
@@ -74,7 +79,7 @@ The numerical contribution from the branching ratio is significant compared with
 	\label{fig:OOwithd}
 \end{figure}
 
-\paragraph{}The package HAWK ~\cite{HAWK_2015} provides a calculation for VBF and VH process matrix element, with the kinematic variables in final state (4-momenta of the Higgs boson and 2 tagging jets in VBF). For the initial state, the momentum fraction Bjorken $x_1$($x_2$) of parton can be derived by energy-momentum conservation: 
+\paragraph{}\todo{Mention first (and cite the OO equation) that to measure OO one needs to measure the 7 phase space variables needed to characterize the event then speak of Hawk} The package HAWK ~\cite{HAWK_2015} provides a calculation for VBF and VH process matrix element, with the kinematic variables in final state (4-momenta of the Higgs boson and 2 tagging jets in VBF). For the initial state, the momentum fraction Bjorken $x_1$($x_2$) \todo{say that 1 and 2 are incoming and outgoing partons} of parton can be derived by energy-momentum conservation: 
 
 \begin{center}
 \begin{math}
@@ -82,7 +87,7 @@ x_{1,2}^{reco}=\frac{m_{Hjj}}{\sqrt{s}}e^{\pm y_{Hjj}}
 \end{math}
 \end{center}
 
-Where $m_{Hjj}$ and $y_{Hjj}$ are the invariant mass and pseudo rapidity of Higgs+2 tagging jets system. The matrix element calculation performs a summation of all possible flavor configurations in initial and final state ij->klH weighted by CT10 leading order parton distribution functions(PDFs.). 
+Where $m_{Hjj}$ and $y_{Hjj}$ are the invariant mass and pseudo rapidity of Higgs+2 tagging jets system. The matrix element calculation performs a summation of all possible flavor configurations in initial and final state ij->klH weighted by CT10 leading order parton distribution functions(PDFs.) \todo{speak first that it's weighted a parton distribution function and then mention CT10 in the next section, say also that the shape doesn't depend on PDF choice and say how these parameters are estimated at truth and reco level}. 
 
 \begin{center}
 \begin{math}

@@ -1,31 +1,33 @@
 \section{Event selection}
 \label{sec:hgam_selection}
 
-
+\todo{fix all citations!!}
 In this section, we provide a brief description of the different objects selection and reconstruction in photon + jets final state. The main part is similar to previous \Hyy coupling work \cite{ATLAS-CONF-2020-026}, and the relevant changes specifically for this analysis are highlighted. 
 
 \subsection{Object reconstruction}
 \label{ssec:obj_reconstruction}
 
 \subsubsection{Photon Reconstruction and pre-selections}
+\todo{add necessary calibration, id, isolation notes citation}
 Photons are reconstructed using dynamic, variable-size energy clusters in the EM calorimeter~\cite{ATL-PHYS-PUB-2017-022}, associated with tracks reconstructed in the inner detector in case of conversion vertices are identified. The Loose identification of photon-like object bases on shower shape variables defined with cells of middle and back portions of the LAr according calorimeter. We pre-select loose photons requiring $\pT>\SI{25}{\GeV}$ and $|\eta_{S2}|<2.37$, vetoing the transition region between $1.37 < |\eta_{S2}| < 1.52$. The selected loose photons are calibrated using the latest Run-2 calibration corrections with 69 variations for the scale and 10 for the resolution, witch detailed in ~\cite{Andari:2655306}. Additionally an isolation requirement is applied based on both calorimeter-based and track-based requirements. The \texttt{FixedCutLoose} working point is used. During the event selection, events are required to have at least two loose photons, and the two loose photons with the highest pT define the Higgs candidate.\\
 
 \textcolor{red}{NEED VARIFICATION} An NN based algorithm is used to choose the diphoton vertex after the selection of two photon candidates. All the object kinematics are recomputed again: all the cuts reported in below sections are related to the diphton vertex.
-
+\todo{find full details in the HGam common note or fiducial or couplings}
 
 \subsubsection{Jet reconstruction and selections}
-
+\todo{add necessary calibration, JVT, fJVT citations}
 Jets are reconstructed using the  \antikt~\cite{Cacciari:2008gp}
 algorithm with a radius parameter $R=0.4$ as implemented in the {\textsc FastJet} 3.2.2~\cite{Fastjet,Cacciari:2005hq} software package. A particle flow (PFlow) algorithm developed in \Refn{\cite{PERF-2015-09}} is considered to improve the energy and angular resolution, reconstruction efficiency, and \pileup stability compared to calorimeter jets. PFlow jets were reconstructed at the derivation step to ensure that only tracks coming from the primary vertex defined in the analysis are used. Quality criteria are applied to the events in order to reject jets affected by noisy cells in the calorimeter or other bad performance detector effects. Events with jets consistent with noise in the calorimeter or non-collision background are vetoed.
 
 Preselected jets must have $\pT^{\textrm jet} > \SI{25}{\GeV}$ and $|y^{\textrm jet} |<4.4$. An overlap removal is also applied: jets are rejected if they lie within a distance
 of $\Delta R < 0.4$ of a selected photon or electron. To suppress \pileup, jets a cut on the so-called ``jet vertex tag'' is applied. The JVT variable is required
 to be larger than 0.5 for jets with $\abseta< 2.4$ in the region $20<\pT^{\textrm jet}<\SI{60}{\GeV}$. A fJVT cut is currently not used in diphoton analyses, since fJVT calibration for the
-PFlow jet collection is still work-in-progress. From EMTopo fJVT studies, it has been seen that the scale-factor is significantly deviating from one and also the use of fJVT in the analysis brings a moderate improvement.
+PFlow jet collection is still work-in-progress. From EMTopo fJVT studies, it has been seen that the scale-factor is significantly deviating from one and also the use of fJVT in the analysis brings a moderate improvement \todo{incorrect, now it's fixed and it's used and applied get the full description for Jet/Etmiss or fiducial note}.
 
 
 
 \subsubsection{Electron selections}
+\todo{remove, no need since our selection doesn't involve leptons}
 Electrons are reconstructed using dynamic, variable-size energy clusters in the EM calorimeter~\cite{ATL-PHYS-PUB-2017-022}, associated with tracks reconstructed in the inner detector. Electron candidates are required to have $\pT>\SI{10}{\GeV}$  and be in a region defined by $\abseta<2.47$. Electrons within the EM calorimeter transition region $1.37<\abseta<1.52$ are not considered. In addition, cut for electron track to vertex association are applied. Electrons are required to have a transverse impact parameter $\left|\dzero/\sigma(\dzero)\right|<5$ and a longitudinal impact parameter $\left|\zzsth\right|<\SI{0.5}{\mm}$. Electron candidates with associated super-clusters affected by dead front-end boards in the first or second sampling or by the presence high-voltage trips affecting the three samplings or that includes a masked cell during in the core are considered as bad-quality electrons and not considered in the analysis.
 
 Electrons are selected using a likelihood (LH) based identification. The inputs to the LH include measurements from the tracking system, the calorimeter system and quantities that combine both tracks and calorimeter information. While the electron reconstruction has been moved to a super-cluster based approach, the calorimetric variables describing the shape of the shower have not been changed and still using a fixed-cluster approach~\cite{Anastopoulos:2652163}. A \texttt{Medium LH} identification is used in the analysis.
@@ -49,7 +51,7 @@ show that the measured fake rate increase from $<2\% $ in the central barrel to 
 by $1-2\% $ from 25 to 300 GeV.
 
 \subsubsection{Muon selections}
-
+\todo{remove, no need since our selection doesn't involve leptons}
 Muon candidates are reconstructed from tracks in the inner detector and the muon spectrometer. Muons are required to have $\pT>\SI{10}{\GeV}$ and $\abseta<2.7$. The transverse impact parameter is required to be  $\left|\dzero/\sigma(\dzero)\right|<3$ while the requirement on the longitudinal parameter is $\left|\zzsth\right|<\SI{0.5}{\mm}$.
 
 Muon identification is performed by applying a set of quality requirements based upon the specific features of each of the reconstructed muon types. Such requirements aim to reject fake muons coming mainly from pion and kaon decays and guarantee robust momentum measurement. Muon candidates originating from in-flight decays of charged hadrons are often characterized by the presence of a distinctive ``kink" topology in the reconstructed track. The direct consequence is a poor compatibility within the uncertainties between the measured momentum in the inner detector and the muon spectrometer (MS), and a poor $\chi^2$ quality of the ID-MS combined track fit. The ``$q/p$ significance'', $\rho^{'}$ and the normalized $\chi^2$ of a combined track fit variables are chosen to define the selection working points~\cite{Bugge:2665711}. The identification working point used in this analysis is the default one in ATLAS, the \texttt{Medium} working point. This working point aims to minimize the systematic uncertainties associated with muon reconstruction and calibration.
@@ -67,6 +69,7 @@ In order to avoid any possible double counting between objects an overlap remova
 
 
 \subsubsection{Cross-checks with previous MxAOD production}
+\todo{Reformulate this part and integrate it with previous, no need to make old and new selection.}
 The framework used for this analysis is based on a HGam group common software package. This framework uses HIGG1D1 derivation as input and outputs mini-xAOD (MxAOD) with all the calibrated objects and user-level variables. The current tag of the framework is \texttt{h026}. Several updates were made with respect to the previous tag \texttt{h025} used in several HGam analyses published during 2020. Some of the main changes made in the code are:
 \textcolor{red}{Need detailed description of h026}
 
@@ -89,7 +92,7 @@ The distribution of several basic kinematic variables and optimal observable wer
 \begin{description}
 	
 	\item[Trigger]~
-	
+	\todo{add the single photon triggers, add the trigger eff and citations}
 	\begin{itemize}
 		\item [\textbf{2015+2016}] The \texttt{HLT\_g35\_loose\_g25\_loose} diphoton trigger is used which requires at least two reconstructed photons with \ET larger than 35 and \SI{25}{\GeV} passing \emph{loose} identification requirements.
 		
@@ -141,7 +144,7 @@ The distribution of several basic kinematic variables and optimal observable wer
 
 \subsubsection{VBF enriched category}
 
-The per-selection for VBF process is inherited from old STXS 1.0 framework in 80 \ifb analysis, which is also based on the kinematic characters of the reconstructed particles \cite{ATLAS-CONF-2018-028}. A $qq\to Hqq$ final state is required, with the rapidity of Higgs should be within the barrel region $|\eta_{H}|<2.5$. The upper limit for jet energy is set to 200GeV. Di-jet system should have a large invariant mass $m_{jj}>400GeV$ and large pseudo-rapidity separation $|\Delta \eta_{jj}|>2.0$. A Zeppenfield $\eta$  cut is used to focus on VBF process $|\eta^{Zepp}|<5$. An additional BDT based categorization specifically for this analysis would be described in Section ~\ref{sec:Category}. 
+The per-selection \todo{fix text} for VBF process is inherited from old STXS 1.0 framework in 80 \ifb analysis, which is also based on the kinematic characters of the reconstructed particles \cite{ATLAS-CONF-2018-028}. A $qq\to Hqq$ final state is required, with the rapidity of Higgs should be within the barrel region $|\eta_{H}|<2.5$. The upper limit for jet energy is set to 200GeV \todo{are you sure this is applied, it's not in the table}. Di-jet system should have a large invariant mass $m_{jj}>400GeV$ and large pseudo-rapidity separation $|\Delta \eta_{jj}|>2.0$. A Zeppenfield $\eta$  cut is used to focus on VBF process $|\eta^{Zepp}|<5$. An additional BDT based categorization specifically for this analysis would be described in Section ~\ref{sec:Category}. 
 
 
 
