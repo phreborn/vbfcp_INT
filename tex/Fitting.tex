@@ -5,12 +5,52 @@
 
 \begin{center}
 \begin{math}
-\mathcal{L} = \mathcal{L}(\boldsymbol{x} |\boldsymbol{\theta}) = \prod_{bin}\prod_{j=1}^{N}f_{bin}(m_{\gamma\gamma})G(\theta)
+\mathcal{L}(\boldsymbol{x} |\mu_{vbf},N_{bkg},p_{bkg},\boldsymbol{\theta}) = \prod_{i}^{bin}Pois(n_{i}|\nu_{i}(\mu_{vbf},\boldsymbol{\theta}))\prod_{j=1}^{N}f_{i}(m_{\gamma\gamma}^{j};\boldsymbol{\theta})\prod_{k}G(\theta_{k})
 \end{math}
 \end{center}
 
+\begin{center}
+	\begin{math}
+	f_{i}(m_{\gamma\gamma})\propto(\mu_{vbf} \times N_{vbf}^{i} + N_{ggF}^{i})\times f_{sig}(m_{\gamma\gamma};\boldsymbol{p_{CB}^{i}})+N_{bkg}^{i}\times f_{bkg}(m_{\gamma\gamma};\boldsymbol{p_{bkg}^{i}})
+	\end{math}
+\end{center}
 
-Where $\boldsymbol x$ represents dataset, $\boldsymbol \theta$ is nuisance parameter, $f_{bin}(m_{\gamma\gamma})$ is the diphoton invariant mass distribution model for each bins, $G(\boldsymbol \theta)$ is constrain function for systematic uncertainties. The parameter of interest(POI), $\tilde{d}$, is embedded in $m_{\gamma\gamma}$ model, so there is no analytic relation between likelihood value and POI. A set of signal templates corresponding to different value of CP-mixing parameter $\tilde{d}$ is created by reweighting the SM VBF $H\to\gamma\gamma$ to build the CP-mixing models, and then a template fit could be performed with data and model with different $\tilde{d}$ value (background model keeps\todo{kept} consistent) to evaluate the likelihood function. For the fit in each $\tilde{d}$ model, VBF signal strength, continuum background yield and parameters describing the background model are float, which means the effect of background mis-modelling is considered and any constrain from possible model-dependent cross section information is not exploited. Other nuisance parameters are fixed to their best-fit values $\hat{\boldsymbol \theta}$. 
+\begin{center}
+\begin{math}
+\nu_{i}=
+\end{math}
+\end{center}
+
+where,
+\begin{itemize}
+	\item $\boldsymbol x$ represents dataset
+	\item VBF signal strength, $\mu_{vbf}$, is the POI and shared among all the bins in the fit
+	\item the following NPs are float in the fit: continuum background yields ($N_{bkg}$) , continuum background shape parameters ($\boldsymbol{p_{bkg}}$) and other systematic NPs ($\boldsymbol{\theta}$)
+	\item signal yields ($N_{vbf}$, $N_{ggF}$) and shape parameters ($\boldsymbol{p_{CB}}$) of signal function are fixed to MC prediction
+	\item $f_{i}(m_{\gamma\gamma})$ is the diphoton invariant mass distribution model for each bins
+	\item double sided crystal ball function is used for $f_{sig}$
+	\item $f_{bkg}$ are either selected by spurious signal test or by wald test as described in \Sect{\ref{sec:background_model}}
+	\item $G(\boldsymbol \theta)$ are constraint functions for systematic uncertainties as in Table~\ref{tab:constraint_func}
+\end{itemize}
+
+\begin{table}[]
+	\centering
+\begin{tabular}{ccc}
+	\hline
+	\toprule
+	\multicolumn{2}{c}{systematic} & constraint funciton \\ \hline
+	\toprule
+	\multirow{2}{*}{exp.}  & jet    & asymmetric                \\ \cline{2-3} 
+	& photon & asymmetric                \\ \hline
+	\multirow{3}{*}{theo.} & PDF    & log-nornmal                \\ \cline{2-3} 
+	& QCD    & log-normal                \\ \cline{2-3} 
+	& shower & Gaussian                \\ \bottomrule
+\end{tabular}
+\caption{constraint functions for systematics}
+\label{tab:constraint_func}
+\end{table}
+
+The parameter of interest (POI) of this analysis, $\tilde{d}$, is embedded in $m_{\gamma\gamma}$ model, so there is no analytic relation between likelihood value and POI. A set of signal templates corresponding to different value of CP-mixing parameter $\tilde{d}$ is created by reweighting the SM VBF $H\to\gamma\gamma$ to build the CP-mixing models, and then a template fit could be performed with data and model with different $\tilde{d}$ value (background model kept\todo{kept} consistent) to evaluate the likelihood function. For the fit in each $\tilde{d}$ model, VBF signal strength, continuum background yield and parameters describing the background model are float, which means the effect of background mis-modelling is considered and any constrain from possible model-dependent cross section information is not exploited. Other nuisance parameters are fixed to their best-fit values $\hat{\boldsymbol \theta}$. 
 
 
 \paragraph{} A negative log-likelihood (NLL) curve can be constructed by calculating the NLL value for each $\tilde{d}$ hypothesis. Best-estimated $\tilde{d}$ as well as its central confidence interval at 68\% (95\%) confidence level (CL) can be determined with the minimum value of NLL, $NLL_{min}$ and the points at which $\Delta NLL = NLL-NLL_{min} = 0.5(1.96)$. An Asimov dataset is used to get expected sensitivity from this method and is shown in Figure ~\ref{fig:NLLcurve}. 
